@@ -24,6 +24,7 @@ jobs:
           
   deploy:
     runs-on: ubuntu-latest
+    steps:
     - name: Deploy the app
       run: echo "docker compose deployed the app
   
