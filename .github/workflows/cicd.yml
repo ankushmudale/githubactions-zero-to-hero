@@ -4,6 +4,16 @@ name: CICD
 # Manual click (deliver) whenever users needs
 on:
   workflow_dispatch: 
+    inputs:
+      environment:
+        description: This is the enviornment where this workflow runs
+        default: 'dev'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
 
 jobs:
   code:
@@ -24,6 +34,7 @@ jobs:
       - name: Test the container
         run: echo "Testing the container"      
   deploy:
+    if: inputs.environment == 'dev'
     needs: [test]
     runs-on: ubuntu-latest
     steps:
