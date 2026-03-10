@@ -1,13 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ankush Mudale | DevOps Engineer</title>
+<title>Ankush Mudale | Senior DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,19 +23,17 @@ scroll-behavior:smooth;
 
 body{
 
-background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c1c1c);
-background-size:400% 400%;
-animation:gradient 15s ease infinite;
 color:white;
+background:linear-gradient(-45deg,#0f2027,#1a2980,#26d0ce,#6a11cb);
+background-size:400% 400%;
+animation:bgmove 12s infinite;
 
 }
 
-@keyframes gradient{
-
+@keyframes bgmove{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
-
 }
 
 .container{
@@ -46,174 +46,172 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 0;
+padding:25px 0;
 }
 
 .logo{
 font-size:24px;
 font-weight:600;
-color:#00eaff;
+color:#00ffd5;
 }
 
 nav a{
-
 margin-left:20px;
-text-decoration:none;
 color:white;
-transition:0.3s;
-
+text-decoration:none;
+transition:.3s;
 }
 
 nav a:hover{
-
-color:#00eaff;
-
+color:#00ffd5;
 }
 
 .hero{
-
 height:90vh;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-
 }
 
 .hero h1{
-
-font-size:55px;
-margin-bottom:10px;
-
+font-size:60px;
 }
 
 .hero span{
-
-color:#00eaff;
-
+color:#00ffd5;
 }
 
 .hero p{
-
-opacity:0.8;
-max-width:700px;
+max-width:650px;
 margin:auto;
-
+opacity:.85;
 }
 
 .btn{
-
-margin-top:25px;
 display:inline-block;
-padding:12px 30px;
-border-radius:30px;
-background:#00eaff;
+margin-top:25px;
+padding:12px 28px;
+background:#00ffd5;
 color:black;
-font-weight:600;
+border-radius:30px;
 text-decoration:none;
-transition:0.3s;
-
+font-weight:600;
+transition:.3s;
 }
 
 .btn:hover{
-
 transform:scale(1.1);
-
 }
 
 section{
-
 padding:80px 0;
-
 }
 
 .section-title{
-
 text-align:center;
-font-size:32px;
+font-size:34px;
 margin-bottom:50px;
-
 }
 
 .glass{
-
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
-padding:30px;
+background:rgba(255,255,255,0.1);
 border-radius:15px;
-transition:0.4s;
-
+padding:30px;
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.2);
+transition:.4s;
 }
 
 .glass:hover{
-
 transform:translateY(-10px);
 box-shadow:0 10px 40px rgba(0,0,0,0.4);
-
 }
 
 .grid{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
-
 }
 
 .skill{
-
 text-align:center;
-
+font-weight:500;
 }
 
 .timeline{
-
-border-left:3px solid #00eaff;
+border-left:3px solid #00ffd5;
 padding-left:20px;
-
 }
 
 .timeline-item{
-
 margin-bottom:40px;
-
 }
 
 .timeline-item h3{
-
-color:#00eaff;
-
+color:#00ffd5;
 }
 
 .projects{
-
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 .project-card{
-
 padding:25px;
-
-}
-
-footer{
-
-text-align:center;
-padding:30px;
-opacity:0.7;
-
 }
 
 .contact a{
-
 display:block;
 margin:10px 0;
-color:#00eaff;
+color:#00ffd5;
 text-decoration:none;
+}
 
+footer{
+text-align:center;
+padding:30px;
+opacity:.8;
+}
+
+/* terminal */
+
+.terminal{
+background:black;
+padding:20px;
+border-radius:10px;
+font-family:"Source Code Pro";
+margin-top:25px;
+text-align:left;
+min-height:120px;
+}
+
+.cursor{
+display:inline-block;
+background:#00ffd5;
+width:10px;
+height:20px;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0;}
+100%{opacity:1;}
+}
+
+/* reveal animation */
+
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
 }
 
 </style>
@@ -226,35 +224,36 @@ text-decoration:none;
 
 <header>
 
-<div class="logo">Ankush Mudale</div>
+<div class="logo">Ankush DevOps</div>
 
 <nav>
-
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </header>
+
 
 
 <section class="hero">
 
 <div>
 
-<h1>Hi I'm <span>Ankush</span></h1>
+<h1>Hello I'm <span>Ankush</span></h1>
 
-<h2>Cloud & DevOps Engineer</h2>
+<h2>Senior Cloud & DevOps Engineer</h2>
 
 <p>
 
-12+ years experience in IT infrastructure, cloud engineering,
-DevOps automation and AWS architecture.
+12+ years of IT experience specializing in AWS architecture,
+DevOps automation, CI/CD pipelines, and scalable cloud infrastructure.
 
 </p>
+
+<div class="terminal" id="terminal"></div>
 
 <a class="btn" href="#">Download Resume</a>
 
@@ -263,7 +262,8 @@ DevOps automation and AWS architecture.
 </section>
 
 
-<section id="about">
+
+<section id="about" class="reveal">
 
 <h2 class="section-title">About Me</h2>
 
@@ -271,20 +271,9 @@ DevOps automation and AWS architecture.
 
 <p>
 
-I am a DevOps and Cloud Engineer with strong experience in AWS cloud,
-CI/CD automation, Infrastructure as Code, and enterprise infrastructure
-management.
-
-</p>
-
-<br>
-
-<p>
-
-My expertise includes AWS architecture, Terraform automation,
-Jenkins pipelines, Docker, Kubernetes, and system monitoring.
-I enjoy building scalable infrastructure and solving complex
-engineering problems.
+Cloud and DevOps Engineer with strong experience in AWS,
+Terraform, Jenkins pipelines, Docker containers,
+Kubernetes orchestration and infrastructure automation.
 
 </p>
 
@@ -293,22 +282,23 @@ engineering problems.
 </section>
 
 
-<section id="skills">
 
-<h2 class="section-title">DevOps Skills</h2>
+<section id="skills" class="reveal">
+
+<h2 class="section-title">Tech Stack</h2>
 
 <div class="grid">
 
-<div class="glass skill">AWS (EC2, VPC, IAM, S3)</div>
+<div class="glass skill">AWS</div>
 <div class="glass skill">Terraform</div>
-<div class="glass skill">Jenkins CI/CD</div>
+<div class="glass skill">Jenkins</div>
 <div class="glass skill">Docker</div>
 <div class="glass skill">Kubernetes</div>
 <div class="glass skill">Linux</div>
-<div class="glass skill">Bash Scripting</div>
 <div class="glass skill">Git</div>
+<div class="glass skill">Prometheus</div>
+<div class="glass skill">Grafana</div>
 <div class="glass skill">CloudFormation</div>
-<div class="glass skill">Prometheus & Grafana</div>
 
 </div>
 
@@ -316,7 +306,7 @@ engineering problems.
 
 
 
-<section id="experience">
+<section id="experience" class="reveal">
 
 <h2 class="section-title">Experience</h2>
 
@@ -325,33 +315,13 @@ engineering problems.
 <div class="timeline-item glass">
 
 <h3>Cloud & DevOps Engineer</h3>
-
-<p>Livspace | 2020 - 2023</p>
+<p>Livspace | 2020 – 2023</p>
 
 <ul>
-
-<li>Built CI/CD pipelines using Jenkins</li>
-<li>Implemented Terraform infrastructure automation</li>
+<li>Implemented CI/CD pipelines using Jenkins</li>
+<li>Automated infrastructure using Terraform</li>
 <li>Managed AWS infrastructure and EKS clusters</li>
-<li>Improved deployment speed by 80%</li>
-
-</ul>
-
-</div>
-
-<div class="timeline-item glass">
-
-<h3>System Engineer → Assistant Manager</h3>
-
-<p>Livspace | 2015 - 2020</p>
-
-<ul>
-
-<li>Managed enterprise IT infrastructure</li>
-<li>Supported 1000+ users</li>
-<li>Led a team of IT engineers</li>
-<li>Implemented cybersecurity policies</li>
-
+<li>Improved deployment efficiency by 80%</li>
 </ul>
 
 </div>
@@ -362,7 +332,7 @@ engineering problems.
 
 
 
-<section id="projects">
+<section id="projects" class="reveal">
 
 <h2 class="section-title">Projects</h2>
 
@@ -373,22 +343,7 @@ engineering problems.
 <h3>AWS Infrastructure Automation</h3>
 
 <p>
-
-Automated AWS infrastructure deployment using Terraform modules
-and CI/CD pipelines.
-
-</p>
-
-</div>
-
-<div class="glass project-card">
-
-<h3>Kubernetes Monitoring Stack</h3>
-
-<p>
-
-Implemented monitoring for EKS clusters using Prometheus and Grafana.
-
+Provisioned AWS infrastructure using reusable Terraform modules.
 </p>
 
 </div>
@@ -398,10 +353,17 @@ Implemented monitoring for EKS clusters using Prometheus and Grafana.
 <h3>CI/CD Pipeline</h3>
 
 <p>
+Built Jenkins pipeline for automated testing and deployment.
+</p>
 
-Designed Jenkins pipelines to automate application build,
-testing and deployment.
+</div>
 
+<div class="glass project-card">
+
+<h3>Kubernetes Monitoring</h3>
+
+<p>
+Implemented Prometheus and Grafana monitoring stack.
 </p>
 
 </div>
@@ -412,7 +374,7 @@ testing and deployment.
 
 
 
-<section id="contact">
+<section id="contact" class="reveal">
 
 <h2 class="section-title">Contact</h2>
 
@@ -438,6 +400,81 @@ testing and deployment.
 
 </div>
 
-</body>
 
+
+<script>
+
+/* terminal typing */
+
+const text = [
+"$ terraform apply",
+"Infrastructure deployed successfully ✔",
+"$ kubectl get pods",
+"All services running 🚀"
+]
+
+let i=0
+let j=0
+let current=""
+let terminal=document.getElementById("terminal")
+
+function type(){
+
+if(i<text.length){
+
+if(j<text[i].length){
+
+current+=text[i][j]
+terminal.innerHTML=current+"<span class='cursor'></span>"
+j++
+
+setTimeout(type,40)
+
+}
+
+else{
+
+current+="<br>"
+j=0
+i++
+
+setTimeout(type,400)
+
+}
+
+}
+
+}
+
+type()
+
+
+/* scroll animation */
+
+function reveal(){
+
+let reveals=document.querySelectorAll(".reveal")
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight=window.innerHeight
+let elementTop=reveals[i].getBoundingClientRect().top
+let elementVisible=100
+
+if(elementTop<windowHeight-elementVisible){
+
+reveals[i].classList.add("active")
+
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal)
+
+</script>
+
+</body>
 </html>
+```
