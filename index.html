@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ankush Mudale | Cloud & DevOps Engineer</title>
+
+<title>Ankush Mudale | DevOps Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -13,12 +15,25 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins;
+scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+
+background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c1c1c);
+background-size:400% 400%;
+animation:gradient 15s ease infinite;
 color:white;
+
+}
+
+@keyframes gradient{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
 }
 
 .container{
@@ -28,109 +43,181 @@ margin:auto;
 }
 
 header{
-padding:20px 0;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 0;
+}
+
+.logo{
+font-size:24px;
+font-weight:600;
+color:#00eaff;
 }
 
 nav a{
+
 margin-left:20px;
 text-decoration:none;
 color:white;
 transition:0.3s;
+
 }
 
 nav a:hover{
-color:#00e6ff;
+
+color:#00eaff;
+
 }
 
 .hero{
-height:80vh;
+
+height:90vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
+
 }
 
 .hero h1{
-font-size:48px;
+
+font-size:55px;
 margin-bottom:10px;
+
 }
 
 .hero span{
-color:#00e6ff;
+
+color:#00eaff;
+
 }
 
 .hero p{
+
+opacity:0.8;
 max-width:700px;
 margin:auto;
-opacity:0.8;
+
 }
 
 .btn{
+
+margin-top:25px;
 display:inline-block;
-margin-top:20px;
 padding:12px 30px;
 border-radius:30px;
-background:#00e6ff;
+background:#00eaff;
 color:black;
+font-weight:600;
 text-decoration:none;
-font-weight:bold;
 transition:0.3s;
+
 }
 
 .btn:hover{
+
 transform:scale(1.1);
+
 }
 
 section{
+
 padding:80px 0;
+
 }
 
 .section-title{
+
 text-align:center;
 font-size:32px;
-margin-bottom:40px;
+margin-bottom:50px;
+
 }
 
 .glass{
+
 background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-border-radius:15px;
+backdrop-filter:blur(12px);
 padding:30px;
-transition:0.3s;
+border-radius:15px;
+transition:0.4s;
+
 }
 
 .glass:hover{
+
 transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+
 }
 
-.skills-grid{
+.grid{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+
 }
 
-.experience-item{
-margin-bottom:20px;
+.skill{
+
+text-align:center;
+
+}
+
+.timeline{
+
+border-left:3px solid #00eaff;
+padding-left:20px;
+
+}
+
+.timeline-item{
+
+margin-bottom:40px;
+
+}
+
+.timeline-item h3{
+
+color:#00eaff;
+
+}
+
+.projects{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.project-card{
+
+padding:25px;
+
 }
 
 footer{
+
 text-align:center;
-padding:20px;
+padding:30px;
 opacity:0.7;
+
 }
 
 .contact a{
+
 display:block;
 margin:10px 0;
-color:#00e6ff;
+color:#00eaff;
 text-decoration:none;
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -139,14 +226,16 @@ text-decoration:none;
 
 <header>
 
-<h2>Ankush Mudale</h2>
+<div class="logo">Ankush Mudale</div>
 
 <nav>
+
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
-<a href="#certifications">Certifications</a>
+<a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
@@ -155,15 +244,19 @@ text-decoration:none;
 <section class="hero">
 
 <div>
-<h1>Hi, I'm <span>Ankush</span></h1>
-<h3>Cloud & DevOps Engineer</h3>
+
+<h1>Hi I'm <span>Ankush</span></h1>
+
+<h2>Cloud & DevOps Engineer</h2>
 
 <p>
-12+ years IT experience with strong expertise in AWS Cloud, DevOps automation,
-CI/CD pipelines, Infrastructure as Code, and enterprise IT infrastructure.
+
+12+ years experience in IT infrastructure, cloud engineering,
+DevOps automation and AWS architecture.
+
 </p>
 
-<a class="btn" href="https://www.linkedin.com/in/ankush-mudale/" target="_blank">Connect on LinkedIn</a>
+<a class="btn" href="#">Download Resume</a>
 
 </div>
 
@@ -177,18 +270,22 @@ CI/CD pipelines, Infrastructure as Code, and enterprise IT infrastructure.
 <div class="glass">
 
 <p>
-I am a Cloud and DevOps Engineer with over 12 years of experience in IT operations,
-infrastructure management, and cloud technologies. I specialize in AWS cloud,
-automation, CI/CD pipelines, and Infrastructure as Code using Terraform.
+
+I am a DevOps and Cloud Engineer with strong experience in AWS cloud,
+CI/CD automation, Infrastructure as Code, and enterprise infrastructure
+management.
+
 </p>
 
 <br>
 
 <p>
-I have strong experience in managing enterprise environments, optimizing
-cloud infrastructure, and improving deployment automation. I enjoy solving
-complex technical problems and collaborating with teams to build reliable
-and scalable systems.
+
+My expertise includes AWS architecture, Terraform automation,
+Jenkins pipelines, Docker, Kubernetes, and system monitoring.
+I enjoy building scalable infrastructure and solving complex
+engineering problems.
+
 </p>
 
 </div>
@@ -196,23 +293,22 @@ and scalable systems.
 </section>
 
 
-
 <section id="skills">
 
-<h2 class="section-title">Technical Skills</h2>
+<h2 class="section-title">DevOps Skills</h2>
 
-<div class="skills-grid">
+<div class="grid">
 
-<div class="glass">AWS (EC2, S3, IAM, VPC)</div>
-<div class="glass">Terraform (Infrastructure as Code)</div>
-<div class="glass">Jenkins CI/CD</div>
-<div class="glass">Docker & Kubernetes</div>
-<div class="glass">Linux & Bash Scripting</div>
-<div class="glass">CloudFormation</div>
-<div class="glass">Git & Version Control</div>
-<div class="glass">Monitoring (CloudWatch, Prometheus, Grafana)</div>
-<div class="glass">Windows Server & Active Directory</div>
-<div class="glass">Networking & Security</div>
+<div class="glass skill">AWS (EC2, VPC, IAM, S3)</div>
+<div class="glass skill">Terraform</div>
+<div class="glass skill">Jenkins CI/CD</div>
+<div class="glass skill">Docker</div>
+<div class="glass skill">Kubernetes</div>
+<div class="glass skill">Linux</div>
+<div class="glass skill">Bash Scripting</div>
+<div class="glass skill">Git</div>
+<div class="glass skill">CloudFormation</div>
+<div class="glass skill">Prometheus & Grafana</div>
 
 </div>
 
@@ -224,31 +320,41 @@ and scalable systems.
 
 <h2 class="section-title">Experience</h2>
 
-<div class="glass experience-item">
+<div class="timeline">
 
-<h3>Manager – IT Support / Cloud & DevOps Engineer</h3>
-<p>Livspace | 2020 – 2023</p>
+<div class="timeline-item glass">
+
+<h3>Cloud & DevOps Engineer</h3>
+
+<p>Livspace | 2020 - 2023</p>
 
 <ul>
-<li>Designed AWS infrastructure using Terraform</li>
-<li>Implemented CI/CD pipelines using Jenkins</li>
-<li>Managed EKS clusters with Prometheus and Grafana monitoring</li>
-<li>Automated deployments reducing release time by 80%</li>
+
+<li>Built CI/CD pipelines using Jenkins</li>
+<li>Implemented Terraform infrastructure automation</li>
+<li>Managed AWS infrastructure and EKS clusters</li>
+<li>Improved deployment speed by 80%</li>
+
 </ul>
 
 </div>
 
-<div class="glass experience-item">
+<div class="timeline-item glass">
 
-<h3>System Engineer → Assistant Manager IT</h3>
-<p>Livspace | 2015 – 2020</p>
+<h3>System Engineer → Assistant Manager</h3>
+
+<p>Livspace | 2015 - 2020</p>
 
 <ul>
-<li>Managed IT infrastructure for 1000+ employees</li>
-<li>Led a team of 10 IT engineers</li>
-<li>Managed Windows & Linux servers and Active Directory</li>
-<li>Implemented security and vulnerability management</li>
+
+<li>Managed enterprise IT infrastructure</li>
+<li>Supported 1000+ users</li>
+<li>Led a team of IT engineers</li>
+<li>Implemented cybersecurity policies</li>
+
 </ul>
+
+</div>
 
 </div>
 
@@ -256,15 +362,49 @@ and scalable systems.
 
 
 
-<section id="certifications">
+<section id="projects">
 
-<h2 class="section-title">Certifications</h2>
+<h2 class="section-title">Projects</h2>
 
-<div class="skills-grid">
+<div class="projects">
 
-<div class="glass">AWS Solutions Architect Associate</div>
-<div class="glass">Azure Administrator Associate (AZ-104)</div>
-<div class="glass">Azure Fundamentals (AZ-900)</div>
+<div class="glass project-card">
+
+<h3>AWS Infrastructure Automation</h3>
+
+<p>
+
+Automated AWS infrastructure deployment using Terraform modules
+and CI/CD pipelines.
+
+</p>
+
+</div>
+
+<div class="glass project-card">
+
+<h3>Kubernetes Monitoring Stack</h3>
+
+<p>
+
+Implemented monitoring for EKS clusters using Prometheus and Grafana.
+
+</p>
+
+</div>
+
+<div class="glass project-card">
+
+<h3>CI/CD Pipeline</h3>
+
+<p>
+
+Designed Jenkins pipelines to automate application build,
+testing and deployment.
+
+</p>
+
+</div>
 
 </div>
 
@@ -278,26 +418,26 @@ and scalable systems.
 
 <div class="glass contact">
 
-<a href="mailto:ankush.rm25@gmail.com">📧 ankush.rm25@gmail.com</a>
+<a href="mailto:ankush.rm25@gmail.com">Email: ankush.rm25@gmail.com</a>
 
-<a href="tel:+919731779282">📱 +91 9731779282</a>
+<a href="tel:+919731779282">Phone: +91 9731779282</a>
 
-<a href="https://www.linkedin.com/in/ankush-mudale-3a6402347//" target="_blank">
-LinkedIn Profile
-</a>
+<a href="https://www.linkedin.com/in/ankush-mudale/">LinkedIn</a>
 
 </div>
 
 </section>
 
 
+
 <footer>
 
-<p>© 2026 Ankush Mudale | Cloud & DevOps Engineer</p>
+<p>© 2026 Ankush Mudale | DevOps Portfolio</p>
 
 </footer>
 
 </div>
 
 </body>
+
 </html>
