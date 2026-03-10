@@ -1,69 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankush Mudale | Cloud & DevOps Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+padding:20px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00e6ff;
+}
+
+.hero{
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero span{
+color:#00e6ff;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+opacity:0.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+border-radius:30px;
+background:#00e6ff;
+color:black;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
+}
+
+.glass{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:15px;
+padding:30px;
+transition:0.3s;
+}
+
+.glass:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.experience-item{
+margin-bottom:20px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+opacity:0.7;
+}
+
+.contact a{
+display:block;
+margin:10px 0;
+color:#00e6ff;
+text-decoration:none;
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- Header & Navigation Section -->
-    <header style="text-align: center;"> <!-- Inline CSS for basic centering -->
-        <h1>John Doe</h1>
-        <p>Web Developer and Designer</p>
-        <nav>
-            <a href="#about">About</a> | 
-            <a href="#projects">Projects</a> | 
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<div class="container">
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Welcome to my portfolio. I am a passionate web developer with skills in HTML, CSS, and JavaScript. I enjoy building clean and efficient websites.
-        </p>
-    </section>
+<header>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Project Name</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Project One</td>
-                    <td>A simple website built with only HTML.</td>
-                    <td><a href="http://example.com">View Project</a></td>
-                </tr>
-                <tr>
-                    <td>Project Two</td>
-                    <td>A responsive landing page design.</td>
-                    <td><a href="http://example.com">View Project</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+<h2>Ankush Mudale</h2>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com" target="_blank">://linkedin.com</a></p>
-        <p>GitHub: <a href="https://github.com" target="_blank">://github.com</a></p>
-    </section>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#certifications">Certifications</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 John Doe</p>
-    </footer>
+</header>
+
+
+<section class="hero">
+
+<div>
+<h1>Hi, I'm <span>Ankush</span></h1>
+<h3>Cloud & DevOps Engineer</h3>
+
+<p>
+12+ years IT experience with strong expertise in AWS Cloud, DevOps automation,
+CI/CD pipelines, Infrastructure as Code, and enterprise IT infrastructure.
+</p>
+
+<a class="btn" href="https://www.linkedin.com/in/ankush-mudale/" target="_blank">Connect on LinkedIn</a>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="glass">
+
+<p>
+I am a Cloud and DevOps Engineer with over 12 years of experience in IT operations,
+infrastructure management, and cloud technologies. I specialize in AWS cloud,
+automation, CI/CD pipelines, and Infrastructure as Code using Terraform.
+</p>
+
+<br>
+
+<p>
+I have strong experience in managing enterprise environments, optimizing
+cloud infrastructure, and improving deployment automation. I enjoy solving
+complex technical problems and collaborating with teams to build reliable
+and scalable systems.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section id="skills">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills-grid">
+
+<div class="glass">AWS (EC2, S3, IAM, VPC)</div>
+<div class="glass">Terraform (Infrastructure as Code)</div>
+<div class="glass">Jenkins CI/CD</div>
+<div class="glass">Docker & Kubernetes</div>
+<div class="glass">Linux & Bash Scripting</div>
+<div class="glass">CloudFormation</div>
+<div class="glass">Git & Version Control</div>
+<div class="glass">Monitoring (CloudWatch, Prometheus, Grafana)</div>
+<div class="glass">Windows Server & Active Directory</div>
+<div class="glass">Networking & Security</div>
+
+</div>
+
+</section>
+
+
+
+<section id="experience">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="glass experience-item">
+
+<h3>Manager – IT Support / Cloud & DevOps Engineer</h3>
+<p>Livspace | 2020 – 2023</p>
+
+<ul>
+<li>Designed AWS infrastructure using Terraform</li>
+<li>Implemented CI/CD pipelines using Jenkins</li>
+<li>Managed EKS clusters with Prometheus and Grafana monitoring</li>
+<li>Automated deployments reducing release time by 80%</li>
+</ul>
+
+</div>
+
+<div class="glass experience-item">
+
+<h3>System Engineer → Assistant Manager IT</h3>
+<p>Livspace | 2015 – 2020</p>
+
+<ul>
+<li>Managed IT infrastructure for 1000+ employees</li>
+<li>Led a team of 10 IT engineers</li>
+<li>Managed Windows & Linux servers and Active Directory</li>
+<li>Implemented security and vulnerability management</li>
+</ul>
+
+</div>
+
+</section>
+
+
+
+<section id="certifications">
+
+<h2 class="section-title">Certifications</h2>
+
+<div class="skills-grid">
+
+<div class="glass">AWS Solutions Architect Associate</div>
+<div class="glass">Azure Administrator Associate (AZ-104)</div>
+<div class="glass">Azure Fundamentals (AZ-900)</div>
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="glass contact">
+
+<a href="mailto:ankush.rm25@gmail.com">📧 ankush.rm25@gmail.com</a>
+
+<a href="tel:+919731779282">📱 +91 9731779282</a>
+
+<a href="https://www.linkedin.com/in/ankush-mudale-3a6402347//" target="_blank">
+LinkedIn Profile
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Ankush Mudale | Cloud & DevOps Engineer</p>
+
+</footer>
+
+</div>
 
 </body>
 </html>
