@@ -5,25 +5,25 @@ on:
         branches: [main]
 
 jobs:
-   build-and-push:
+    build-and-push:
         runs-on: ubuntu-latest
 
-        steps:
+      steps:
           - name: Code Checkout
             uses: actions/checkout@v4
 
           - name: Login to Docker Hub
             uses: docker/login-actions@v3
             with:
-              username: ${{vars.DOCKERHUB_USER}}
-              password: ${{secrets.DOCKERHUB_TOKEN}}
+               username: ${{vars.DOCKERHUB_USER}}
+               password: ${{secrets.DOCKERHUB_TOKEN}}
 
           - name: Build & Push Dockerhub
             uses: docker/build-push-actions@v6
             with:
-             context: .
-             push: true
-             tags: |
-                  ${{vars.DOCKERHUB_USER}}/github-actions-app:${{github.ref_name}}
-                  ${{vars.DOCKERHUB_USER}}/github-actions-app:latest 
-                  ${{vars.DOCKERHUB_USER}}/github-actions-app:${{github.sha}}
+              context: .
+              push: true
+              tags: |
+                ${{vars.DOCKERHUB_USER}}/github-actions-app:${{github.ref_name}}
+                ${{vars.DOCKERHUB_USER}}/github-actions-app:latest 
+                ${{vars.DOCKERHUB_USER}}/github-actions-app:${{github.sha}}
