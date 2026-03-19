@@ -8,9 +8,6 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: Copy Docker file
-              uses: appleboy/scp-action@v1
-
             - name: SSH to Prod Server
               uses: appleboy/ssh-action@v1.0.3
               with:
@@ -19,4 +16,4 @@ jobs:
                 key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
                 script: |
                   echo "Starting Deployment"
-                  mkdir devops
+                  mkdir -p devops
