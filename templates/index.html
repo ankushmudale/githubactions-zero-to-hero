@@ -1,77 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevOps Zero To Hero</title>
+<title>DevOps 3D Dashboard</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+}
 
 body{
-min-height:100vh;
+height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-color:#e0e0e0
+background:#0f172a;
+perspective:1200px;
+color:#fff;
 }
 
-.container{text-align:center;padding:2rem;max-width:640px}
+/* Container */
+.container{
+text-align:center;
+transform-style:preserve-3d;
+}
 
 h1{
-font-size:2.5rem;
-background:linear-gradient(90deg,#00d2ff,#7b2ff7);
+font-size:2.8rem;
+margin-bottom:1rem;
+background:linear-gradient(90deg,#00f5ff,#7b2ff7);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-margin-bottom:.5rem
 }
 
-.badge{
-display:inline-block;
-margin:1rem 0;
-padding:.4rem 1.2rem;
-border:1px solid #7b2ff7;
-border-radius:999px;
-font-size:.9rem;
-color:#c4b5fd
-}
-
+/* Pipeline Text */
 .pipeline{
-margin-bottom:1.5rem;
+margin-bottom:2rem;
+color:#94a3b8;
 font-size:.9rem;
-color:#9ca3af
 }
 
+/* Cards Layout */
 .cards{
 display:flex;
-gap:1rem;
+gap:1.5rem;
 justify-content:center;
-flex-wrap:wrap
+flex-wrap:wrap;
+transform-style:preserve-3d;
 }
 
+/* 3D Card */
 .card{
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.1);
-border-radius:12px;
-padding:1.4rem;
-min-width:150px
+width:180px;
+height:140px;
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transition:0.4s;
+transform-style:preserve-3d;
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+border:1px solid rgba(255,255,255,0.1);
+position:relative;
 }
 
+/* Glow Effect */
+.card::before{
+content:"";
+position:absolute;
+inset:0;
+border-radius:20px;
+background:linear-gradient(120deg,transparent,#7b2ff7,transparent);
+opacity:0;
+transition:0.4s;
+}
+
+.card:hover::before{
+opacity:0.6;
+}
+
+/* 3D Hover Tilt */
+.card:hover{
+transform:rotateY(15deg) rotateX(10deg) scale(1.1);
+box-shadow:0 30px 60px rgba(123,47,247,0.6);
+}
+
+/* Text */
 .card span{
-display:block;
-font-size:.7rem;
-color:#9ca3af;
-margin-bottom:.4rem;
-letter-spacing:.1em
+font-size:.75rem;
+color:#94a3b8;
+letter-spacing:.1em;
 }
 
 .card strong{
-font-size:1.2rem;
-color:#f9fafb
+font-size:1.3rem;
+margin-top:.5rem;
 }
+
+/* Floating Badge */
+.badge{
+margin-bottom:1rem;
+display:inline-block;
+padding:.4rem 1.2rem;
+border-radius:999px;
+background:rgba(123,47,247,0.15);
+border:1px solid #7b2ff7;
+color:#c4b5fd;
+}
+
+/* Floating Animation */
+.container{
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0px)}
+50%{transform:translateY(-12px)}
+}
+
 </style>
 </head>
 
@@ -79,22 +131,23 @@ color:#f9fafb
 
 <div class="container">
 
-<h1>DevOps Zero To Hero [DevSecOps Live]</h1>
-<div class="badge">Josh Batch 10 (USA Edition BOOOM)</div>
+<h1>🚀 DevOps 3D Mode</h1>
+<div class="badge">DevSecOps Pipeline</div>
 
 <div class="pipeline">
-Built • Tested • Linted • Deployed via GitHub Actions
+Code → Scan → Build → Secure → Deploy
 </div>
 
 <div class="cards">
+
 <div class="card">
 <span>Framework</span>
-<strong>Flask 3.1</strong>
+<strong>Flask</strong>
 </div>
 
 <div class="card">
 <span>Runtime</span>
-<strong>Python 3.14</strong>
+<strong>Python</strong>
 </div>
 
 <div class="card">
@@ -106,6 +159,7 @@ Built • Tested • Linted • Deployed via GitHub Actions
 <span>CI/CD</span>
 <strong>GitHub Actions</strong>
 </div>
+
 </div>
 
 </div>
