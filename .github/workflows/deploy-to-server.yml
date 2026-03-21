@@ -15,9 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set HEAD SHA environment variable
-        run: echo "DOCKER_TAG=${{ github.event.workflow.run.head_sha }}" >> $GITHUB_ENV
-
       - name: SSH to Prod Server & create app folder
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -25,9 +22,10 @@ jobs:
           username: ${{ secrets.EC2_SSH_USER }}
           key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
           script: |
+            echo " Installing required package & folders"
             sudo apt-get update && sudo apt-get install docker.io docker-compose-plugin -y
             sudo usermod -aG docker $USER
-            mkdir -p ~/devops
+            mkdir -p devops
 
       - name: Copy the docker-compose file
         uses: appleboy/scp-action@v1
@@ -49,6 +47,6 @@ jobs:
             export DOCKERHUB_USER=${{vars.DOCKERHUB_USER}}
             export DOCKER_TAG=${{ github.sha }}
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login --username "${{ vars.DOCKERHUB_USER }}" --password-stdin
-            cd ~/devops && docker compose down && docker compose up -d --build --force-recreate
+            cd ~/devops && docker compose down && docker compose up -d --build --force-recreate --pull always
 
 
