@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
-      DOCKER_TAG: ${{ github.event.workflow_run.head_sha }}
+      DOCKER_TAG: ${{ github.sha }}
 
     steps:
       - name: Checkout code
